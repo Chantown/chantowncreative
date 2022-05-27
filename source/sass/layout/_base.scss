@@ -6,9 +6,11 @@ html {
   box-sizing: border-box;
   background-color: $lighter-orange;
   padding: 6px;
+
   @include media ($desktop-up) {
     padding: 9px;
   }
+
   overflow-x: hidden;
   //overflow: hidden;
   //border: solid $page-border-width-mobile $lighter-orange;
@@ -17,20 +19,20 @@ html {
   }
   border-bottom: none;
   border-top: none; */
-//  scroll-behavior: smooth;
+  //  scroll-behavior: smooth;
 }
 
 body {
-    background-color: white;
-    color: $chantown-gray;
-    min-height: 100%;
-    margin: 0;
-    padding: 0;
-    position: relative;
-
+  background-color: white;
+  color: $chantown-gray;
+  min-height: 100%;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  overflow: hidden;
 }
 
-.row{
+.row {
   @include row();
 }
 
@@ -41,6 +43,7 @@ body {
     width: 87.28027%;
     margin-left: 6.35986%;
   }
+
   @include media($desktop-up) {
     @include span-columns(14 of 16);
     @include shift(1);
@@ -50,13 +53,15 @@ body {
 }
 
 .page-border-top {
-  height:$page-border-width-mobile;
+  height: $page-border-width-mobile;
   width: 100%;
   background-color: $lighter-orange;
+
   @include media($tablet-up) {
     height: $page-border-width-desktop;
   }
 }
+
 .page-container {
   position: relative;
   margin: 0 auto;
@@ -64,14 +69,16 @@ body {
   width: 100%;
   min-height: 100%;
   min-height: 65vh;
-  margin-bottom: -160px;
+  //   margin-bottom: -160px;
   //background-color: lightgreen;
   opacity: .99; // this is needed to set up a new z-index context
   z-index: $z-content;
+
   @include media($tablet-up) {
     width: 90%;
     max-width: 1280px;
   }
+
   @include media($desktop-up) {
     width: 76.5%;
     max-width: 1280px;
@@ -89,12 +96,13 @@ body {
   opacity: 1;
 }
 
-#particles-js canvas{
+#particles-js canvas {
   position: absolute;
   width: 100%;
   height: 100%;
   z-index: -1;
 }
+
 // .body-pixels-container {
 //     position: relative;
 //     display: block;
@@ -108,15 +116,18 @@ body {
   // max-width: 1280px;
   // margin-top: 120px;
   z-index: $z-content;
-  @include padding(0,16,0,16);
+  @include padding(0, 16, 0, 16);
+
   @include media($desktop-up) {
     padding: 0;
     min-height: calc(100vh - 300px);
   }
-/*   @include pad(); */
+
+  /*   @include pad(); */
 }
 
-.fill-parent, .full-width {
+.fill-parent,
+.full-width {
   @include fill-parent();
   width: 100%;
 }
@@ -130,114 +141,171 @@ body {
 }
 
 .home-cta-block-left-col {
+
   //padding:16px;
   //box-shadow: inset 0 1px 0 rgba(255,255,255,0.1), 0 2px 2px rgba(0,0,0,0.05), 0 0 4px 1px rgba(0,0,0,0.05);
   @include media($tablet-up) {
     @include span-columns(4 of 8);
   }
+
   @include media($desktop-up) {
     @include span-columns(7 of 16);
     @include shift(1);
-    p { padding-right: 18px; padding-left: 60px;}
+
+    p {
+      padding-right: 18px;
+      padding-left: 60px;
+    }
   }
 
 }
 
 .home-cta-block-right-col {
+
   //padding: 16px;
-//  margin-top: 26px;
+  //  margin-top: 26px;
   //box-shadow: inset 0 1px 0 rgba(255,255,255,0.1), 0 2px 2px rgba(0,0,0,0.05), 0 0 4px 1px rgba(0,0,0,0.05);
-    @include media($tablet-up) {
-      @include span-columns(4 of 8);
-      margin-top: 0;
-    }
-    @include media($desktop-up) {
-      @include span-columns(7 of 16);
+  @include media($tablet-up) {
+    @include span-columns(4 of 8);
+    margin-top: 0;
+  }
 
-      p { padding-left: 18px; padding-right: 60px;}
+  @include media($desktop-up) {
+    @include span-columns(7 of 16);
 
+    p {
+      padding-left: 18px;
+      padding-right: 60px;
     }
+
+  }
 
 }
 
 @if ($visual-grid) {
- body:before {
-   margin: 0 auto;
-   max-width: 1280px;
-   @include media($desktop-up) {
-     width: 85%;
-     max-width: 1280px;
-   }
- }
+  body:before {
+    margin: 0 auto;
+    max-width: 1280px;
+
+    @include media($desktop-up) {
+      width: 85%;
+      max-width: 1280px;
+    }
+  }
 }
 
 
 .logo--studio-chanpei {
-  max-width: 80px; 
+  max-width: 80px;
   max-height: 80px;
 
   @include media($desktop-up) {
-  max-width: 120px!important; 
-  max-height: 120px;
+    max-width: 120px !important;
+    max-height: 120px;
   }
 }
 
 
 .logo--chantown-inpage {
 
-  max-width: 330px; 
+  max-width: 330px;
+
   @include media($desktop-up) {
-    max-width: 500px!important; 
+    max-width: 500px !important;
     max-height: 80px;
   }
 }
 
 .flex-center {
   display: flex;
-  justify-content: center; 
+  justify-content: center;
 }
 
 .margin-top-1x {
-    margin-top: ($default-margin)+px;
+  margin-top: ($default-margin)+px;
 }
 
 .margin-top-2x {
-    margin-top: ($default-margin*2)+px;
+  margin-top: ($default-margin*2)+px;
 }
 
 .margin-top-3x {
-    margin-top: ($default-margin*3)+px;
+  margin-top: ($default-margin*3)+px;
 }
 
 .margin-bottom-1x {
-    margin-bottom: ($default-margin)+px;
+  margin-bottom: ($default-margin)+px;
 }
 
 .margin-bottom-2x {
-    margin-bottom: ($default-margin*2)+px;
+  margin-bottom: ($default-margin*2)+px;
 }
 
 
 .padding-top-1x {
-    padding-top: ($default-padding)+px;
+  padding-top: ($default-padding)+px;
 }
 
 .padding-top-2x {
-    padding-top: ($default-padding*2)+px;
+  padding-top: ($default-padding*2)+px;
 }
 
 .padding-top-3x {
-    padding-top: ($default-padding*3)+px;
+  padding-top: ($default-padding*3)+px;
 }
 
 .padding-bottom-1x {
-    padding-bottom: ($default-padding)+px;
+  padding-bottom: ($default-padding)+px;
 }
 
 .padding-bottom-2x {
-    padding-bottom: ($default-padding*2)+px;
+  padding-bottom: ($default-padding*2)+px;
 }
 
 .margin-bottom-3x {
-    margin-bottom: $default-margin*3;
+  margin-bottom: $default-margin*3;
+}
+
+.text-ticker-container {
+  width: 100%;
+  padding-top: 60px;
+  padding-bottom: 1.125rem;
+  overflow: hidden;
+  @include media($tablet-up) {
+    padding-bottom: 1.25rem;
+  }
+
+  @include media($desktop-up) {
+    padding-bottom: 1.125rem;
+  }
+
+  .text-ticker-content {
+    display: inline-flex;
+    border-top: 2px solid #ff6600;
+    border-bottom: 2px solid #ff6600;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    color: #ff6600;
+    font-family: 'Ultra', serif;
+    font-size: 3.125rem;
+    white-space: nowrap;
+
+    .text-ticker-item {
+      animation: text_ticker_animation 20s linear infinite;
+
+      &:after {
+        content: "\00a0";
+      }
+    }
+  }
+}
+
+@keyframes text_ticker_animation {
+  0% {
+    transform: translate(0)
+  }
+
+  100% {
+    transform: translate(-100%)
+  }
 }

@@ -1,5 +1,12 @@
-<div class="row text-content">
+{{!-- <div class="row text-content">
   <h1 class="size-h1"> {{{h1}}} </h1>
+</div> --}}
+{{!-- Close Door Text Section --}}
+<div class="row text-content">
+    <div class="close-door-container">
+        <div class="close-door-item close-door-left">{{{closeDoorTextLeft}}}</div>
+        <div class="close-door-item close-door-right">{{{closeDoorTextRight}}}</div>
+   </div>
 </div>
 
 
@@ -15,7 +22,7 @@
 
 
 {{!-- Studio Chantown Section --}}
-<div class='row text-content'>
+{{!-- <div class='row text-content'>
     <div class='padding-top-3x'>
         <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
     data-src="{{{studioChanpeiLogo.desktopUrl}}}"
@@ -33,23 +40,25 @@
     <a href='create.html' class="underlined-inverted" style="font-weight:bold; text-transform: uppercase">{{{studioChanpeiMoreLink}}}</a>
   </p>
 
-</div>
+</div> --}}
 
 
 
 
-<div class="row">
-  <div class="cta-block">
+{{!-- <div class="row">
+  <div class="cta-block"> --}}
 
     {{!-- <h2>Chantown on Instagram:</h2> --}}
 
-    <!-- LightWidget Instagram feed --><script src="//lightwidget.com/widgets/lightwidget.js"></script><iframe src="//lightwidget.com/widgets/2e97af6585235e86af89173967c5601f.html" scrolling="no" allowtransparency="true" class="lightwidget-widget" style="width: 100%; border: 0; overflow: hidden;"></iframe>
+    <!-- LightWidget Instagram feed -->
+    {{!-- <script src="//lightwidget.com/widgets/lightwidget.js"></script>
+    <iframe src="//lightwidget.com/widgets/2e97af6585235e86af89173967c5601f.html" scrolling="no" allowtransparency="true" class="lightwidget-widget" style="width: 100%; border: 0; overflow: hidden;"></iframe> --}}
 
-  </div>
-</div>
+  {{!-- </div>
+</div> --}}
 
 {{!-- Chantown Creative Section --}}
-<div class='row text-content padding-top-3x'>
+{{!-- <div class='row text-content padding-top-3x'>
     <div class="">
           <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
       data-src="{{{chantownCreativeLogo.desktopUrl}}}"
@@ -57,25 +66,35 @@
       class="b-lazy logo logo--chantown-inpage"
       alt="{{{chantownCreativeLogo.alt}}}" />
     </div>
-</div>
+</div> --}}
 
 <div class="row text-content">
-  <h2 style="padding-top: 0.7em">{{{chantownCreativeTitle}}}</h2>
+  <h2 style="padding-top: 0.7em">{{{h1}}}</h2>
   <p>
     <span class="leader">{{{chantownCreativeLeaderText}}}</span>
-{{{chantownCreativeBodyCopy}}} <br/>
-
-    <a href='create.html' class="underlined-inverted" style="font-weight: bold; text-transform: uppercase">{{{chantownCreativeMoreLink}}}</a>
   </p>
-  <p>&nbsp;</p>
+{{{chantownCreativeBodyCopy}}}
+{{!-- <br/> --}}
+
+    {{!-- <a href='create.html' class="underlined-inverted" style="font-weight: bold; text-transform: uppercase">{{{chantownCreativeMoreLink}}}</a> --}}
+  {{!-- <p>&nbsp;</p> --}}
 </div>
 
+{{!-- Text Ticker Section --}}
+<div class="row text-content">
+  <div class="text-ticker-container">
+    <div class="text-ticker-content">
+      <div class="text-ticker-item">{{{textTicker}}}</div>
+      <div class="text-ticker-item">{{{textTicker}}}</div>
+    </div>
+  </div>
+</div>
 
 {{!-- Contact Section --}}
-<div id="contact-vc" class="row text-content" style="margin-top: 30px;">
+<div id="contact-vc" class="row text-content">
   <div class="left-profile-image">
       <div class="side-image-content">
-        <h2>{{contactSectionTitle}}</h2>
+        {{!-- <h2>{{contactSectionTitle}}</h2> --}}
         {{{contactSectionTextNextToImage}}}
       </div>
   <div class="images-wrapper" style="background: url({{{contactImage.mobileUrl}}}) top center no-repeat; background-size: contain;"></div>

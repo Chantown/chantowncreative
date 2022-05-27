@@ -267,7 +267,7 @@ h1 + p, h2 + p, h3 + p, h4 + p {
   text-transform: uppercase;
 }
 
-strong, b,{
+strong, b{
   font-weight: bold;
 }
 
@@ -282,17 +282,17 @@ a {
   font-weight: 400;
   text-decoration: none;
   transition: color 0.1s linear;
+  @include animated-link-underline();
+//   &:active,
+//   &:focus,
+//   &:hover {
+//     color: darken($dark-gray, 20%);
+//   }
 
-  &:active,
-  &:focus,
-  &:hover {
-    color: darken($dark-gray, 20%);
-  }
-
-  &:active,
-  &:focus {
-    outline: none;
-  }
+//   &:active,
+//   &:focus {
+//     outline: none;
+//   }
   &:active {
     //top: 1px;
   }
@@ -302,10 +302,13 @@ p a {
   font-weight: 600;
   // color: $lighter-orange;
   color: $darker-orange;
-  &.underlined{ @include animated-link-underline();}
+//   &.underlined{ @include animated-link-underline();}
 }
 
-a.underlined{ @include animated-link-underline(); font-family: $joesfin;}
+a.underlined{
+//   @include animated-link-underline();
+  font-family: $joesfin;
+}
 
 a.underlined-inverted {
   @include animated-link-underline-inverted();
@@ -441,7 +444,7 @@ blockquote {
     margin: 0 auto;
     padding-top: 16px;
   }
- .with-left-arrow:before {  
+ .with-left-arrow:before {
    content: "↑ ";
  }
  @include media($tablet-up){
@@ -493,4 +496,53 @@ blockquote {
 .chevron.left:before {
 	left: 0.25em;
 	transform: rotate(-135deg);
+}
+
+.close-door-container {
+  font-family: 'Ultra', serif;
+
+  .close-door-item {
+    display: block;
+    width: 100%;
+    font-size: 2rem;
+    @include media($tablet-screen) {
+      font-size: 3rem;
+    }
+    @include media($desktop-screen) {
+      font-size: 5rem;
+    }
+    @include media($large-screen-up) {
+      font-size: 6rem;
+    }
+    &.close-door-left {
+      color: #ff9933;
+      text-align: left;
+      animation: close_left_door_animation 1s linear;
+    }
+    &.close-door-right {
+      color: #ff6600;
+      text-align: right;
+      animation: close_right_door_animation 1s linear;
+    }
+  }
+}
+
+@keyframes close_left_door_animation {
+  0% {
+    transform: translate(-150%)
+  }
+
+  100% {
+    transform: translate(0)
+  }
+}
+
+@keyframes close_right_door_animation {
+  0% {
+    transform: translate(150%)
+  }
+
+  100% {
+    transform: translate(0)
+  }
 }

@@ -1,5 +1,9 @@
+{{!-- Close Door Text Section --}}
 <div class="row text-content">
-   <h1 class="size-h1"> {{{h1}}} </h1>
+    <div class="close-door-container">
+        <div class="close-door-item close-door-left">{{{closeDoorTextLeft}}}</div>
+        <div class="close-door-item close-door-right">{{{closeDoorTextRight}}}</div>
+   </div>
 </div>
 
 <div class="row">
@@ -16,12 +20,23 @@
  {{!--  {{{content}}} --}}
   <br>
   <br>
-  <p class="leader"> {{{leader}}} </p>
+  {{{leader}}}
 </div>
+
+{{!-- Text Ticker Section --}}
+<div class="row text-content">
+  <div class="text-ticker-container">
+    <div class="text-ticker-content">
+      <div class="text-ticker-item">{{{textTicker}}}</div>
+      <div class="text-ticker-item">{{{textTicker}}}</div>
+    </div>
+  </div>
+</div>
+
 <!-- <div class="row text-content">
   <p><a href="mailto:hello@chantown.com" style="max-width: 250px" class="fancy-btn btn-w-icon btn-3d icon-bolt contact-btn" data-url="mailto:hello@chantown.com">{{buttonText}}</a></p>
 </div> -->
-<div class="row text-content">
+{{!-- <div class="row text-content">
 
       <div class="left-profile-image">
         <div class="images-wrapper" style="background: url({{bioImage.mobileUrl}}) top center no-repeat; background-size: contain; cursor: pointer;" onclick="window.location = './home.html#contact-vc';">
@@ -30,18 +45,18 @@
             <h2><a class="underlined with-left-arrow" href="./home.html#contact-vc" style="max-width: 370px;"><strong>{{{bioTitle}}}</strong></a></h2>
         </div>
       </div>
-</div>
-<div class="row text-content" style="padding-top: 30px">
-    <h2 style="text-align: center">Join the cocktail party</h2> 
+</div> --}}
+{{!-- <div class="row text-content" style="padding-top: 30px">
+    <h2 style="text-align: center">Join the cocktail party</h2>
   <br/>
-  
-</div>
 
-<div class="row text-content">
+</div> --}}
+
+{{!-- <div class="row text-content"> --}}
   {{!-- <div class="row "> --}}
-      <ul class="hand-drawn-icons">
+      {{!-- <ul class="hand-drawn-icons"> --}}
         <!-- Include hand drawn social links -->
-        @@include('../widgets/_illustratedIcons.html')
-      </ul>
+        {{!-- @@include('../widgets/_illustratedIcons.html') --}}
+      {{!-- </ul> --}}
     {{!-- </div> --}}
-</div>
+{{!-- </div> --}}

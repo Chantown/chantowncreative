@@ -6,6 +6,8 @@ module.exports = (dato, root, i18n) => {
 
     images.forEach(item => {
       if(item.portfolio) {
+        // console.log(item.title);
+        // console.log(item.image.url({ w: 400, fm: 'jpg' }));
         imagesArray.push({
             position: item.position,
             title: item.title,
@@ -37,7 +39,7 @@ module.exports = (dato, root, i18n) => {
     //   var d = new Date(b.year);
     //   return d-c;
     //   });
-    
+
     // sort by Dato CMS position
     // images at bottom of image list in datocms, appear first on front end
     sortedArray = imagesArray.sort(function(a,b){
@@ -45,8 +47,8 @@ module.exports = (dato, root, i18n) => {
       var d = b.position;
       return d-c;
       });
-   
-    
+
+
     return {
       "images" : sortedArray
     }
@@ -83,7 +85,7 @@ module.exports = (dato, root, i18n) => {
       var d = b.position;
       return d-c;
       });
-   
+
 
     return {
       "images" : sortedArray
@@ -146,21 +148,23 @@ module.exports = (dato, root, i18n) => {
           title: p.featuredImage.title,
           alt: p.featuredImage.alt
       },
+      closeDoorTextLeft: p.closeDoorTextLeft,
+      closeDoorTextRight: p.closeDoorTextRight,
       h1: p.h1,
-      studioChanpeiLogo: {
-        mobileUrl: p.studioChanpeiLogo.url({w:281, fm: 'png'}),
-        desktopUrl: p.studioChanpeiLogo.url({w:281, fm: 'png'}),
-        alt: p.studioChanpeiLogo.alt
-      },
-      studioChanpeiTitle: p.studioChanpeiSectionTitle,
-      studioChanpeiLeaderText: p.studioChanpeiLeaderText,
-      studioChanpeiBodyCopy: p.studioChanpeiBodyCopy,
-      studioChanpeiMoreLink: p.studioChanpeiMoreLink,
-      chantownCreativeLogo: {
-        mobileUrl: p.chantownCreativeLogo.url({w:800, fm: 'png'}),
-        desktopUrl: p.chantownCreativeLogo.url({w:1000, fm: 'png'}),
-        alt: p.chantownCreativeLogo.alt
-      },
+    //   studioChanpeiLogo: {
+    //     mobileUrl: p.studioChanpeiLogo.url({w:281, fm: 'png'}),
+    //     desktopUrl: p.studioChanpeiLogo.url({w:281, fm: 'png'}),
+    //     alt: p.studioChanpeiLogo.alt
+    //   },
+    //   studioChanpeiTitle: p.studioChanpeiSectionTitle,
+    //   studioChanpeiLeaderText: p.studioChanpeiLeaderText,
+    //   studioChanpeiBodyCopy: p.studioChanpeiBodyCopy,
+    //   studioChanpeiMoreLink: p.studioChanpeiMoreLink,
+    //   chantownCreativeLogo: {
+    //     mobileUrl: p.chantownCreativeLogo.url({w:800, fm: 'png'}),
+    //     desktopUrl: p.chantownCreativeLogo.url({w:1000, fm: 'png'}),
+    //     alt: p.chantownCreativeLogo.alt
+    //   },
       chantownCreativeTitle: p.chantownCreativeSectionTitle,
       chantownCreativeLeaderText: p.chantownCreativeLeaderText,
       chantownCreativeBodyCopy: p.chantownCreativeBodyText,
@@ -172,7 +176,8 @@ module.exports = (dato, root, i18n) => {
         desktopUrl: p.contactImage.url({w:600, fm: 'png'}),
         alt: p.contactImage.alt
       },
-      contactSectionBodyCopy: p.contactSectionBodyText
+      contactSectionBodyCopy: p.contactSectionBodyText,
+      textTicker: p.textTicker,
     }
 
     return pageData
@@ -187,16 +192,22 @@ module.exports = (dato, root, i18n) => {
           title: p.featuredImage.title,
           alt: p.featuredImage.alt
       },
-      chantownCreativeLogo: {
-        mobileUrl: p.chantownCreativeLogo.url({w:800, fm: 'png'}),
-        desktopUrl: p.chantownCreativeLogo.url({w:1000, fm: 'png'}),
-        alt: p.chantownCreativeLogo.alt
-      },
+    //   chantownCreativeLogo: {
+    //     mobileUrl: p.chantownCreativeLogo.url({w:800, fm: 'png'}),
+    //     desktopUrl: p.chantownCreativeLogo.url({w:1000, fm: 'png'}),
+    //     alt: p.chantownCreativeLogo.alt
+    //   },
+      closeDoorTextLeft: p.closeDoorTextLeft,
+      closeDoorTextRight: p.closeDoorTextRight,
       h1: p.h1,
+      h1b: p.h1b,
+      h1c: p.h1c,
       leader: p.leaderText,
       content1: p.contentSection1,
       content2: p.contentSection2,
+      content3: p.contentSection3,
       clientText: p.clientsSectionText,
+    //   textTicker: p.textTicker,
     }
 
     return pageData
@@ -233,19 +244,21 @@ module.exports = (dato, root, i18n) => {
         title: p.featuredImage.title,
         alt: p.featuredImage.alt
       },
-      h1: p.h1,
+      closeDoorTextLeft: p.closeDoorTextLeft,
+      closeDoorTextRight: p.closeDoorTextRight,
       leader: p.leaderText,
       content: p.contentText,
       buttonText: p.buttonText,
-      bioImage: {
-          mobileUrl: p.bioImage.url({w: 400, fm: 'jpg'}),
-          desktopUrl: p.bioImage.url({w: 600, fm: 'jpg'}),
-          title: p.bioImage.title,
-          alt: p.bioImage.alt
-      },
+    //   bioImage: {
+    //       mobileUrl: p.bioImage.url({w: 400, fm: 'jpg'}),
+    //       desktopUrl: p.bioImage.url({w: 600, fm: 'jpg'}),
+    //       title: p.bioImage.title,
+    //       alt: p.bioImage.alt
+    //   },
       bioTitle: p.bioTitle,
       bioText: p.bioText,
       bioTextUnder: p.bioTextUnderImage,
+      textTicker: p.textTicker,
     }
     return pageData
   };
@@ -260,7 +273,7 @@ module.exports = (dato, root, i18n) => {
 
   dato.clients
     root.createDataFile('source/js/json/clients.json', 'json', buildPaddedClientsJson(dato.clients));
-  
+
   dato.icons
     root.createDataFile('source/js/json/customIcons.json', 'json', buildPaddedIconsJson(dato.socialIcons));
 
