@@ -52,7 +52,7 @@
 
 
 
-  &::after {
+  &:not(.icon)::after {
     position: absolute;
     top: 100%;
     left: 0;
@@ -105,7 +105,7 @@
   }
 
   &:hover::after, &:focus::after, &:active::after, &.active::after {
-    
+
 		opacity: 0;
     -webkit-transition: opacity $default-transition-speed, -webkit-transform $default-transition-speed;
     -moz-transition: opacity $default-transition-speed, -moz-transform $default-transition-speed;

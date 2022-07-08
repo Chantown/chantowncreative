@@ -1,145 +1,259 @@
+// footer {
+//   margin-top: 180px;
+//   height: 190px;
+
+//   @include media($desktop-up) {
+//     margin-bottom: 0;
+//   }
+//   @include outer-container;
+//   .copyright {
+//     color: $medium-gray;
+//     text-align: center;
+//     font-size: 12px;
+//     padding-top: 30px;
+
+
+//     background-color: white;
+//     a {
+//       @include animated-link-underline();
+//     }
+//     // @include media($desktop-up) {
+//     //     padding-bottom: 24px;
+//     // }
+//   }
+
+//   .extra-footnote {
+//     color: $medium-gray;
+//     text-align: center;
+//     font-size: 12px;
+//     clear: both;
+//     padding-top: 6px;
+//     background-color: white;
+//     padding-bottom: 80px;
+//     @include media($desktop-up) {
+//         padding-bottom: 24px;
+//     }
+//   }
+// }
+
+
+// .blog-link {
+//   background-color: $pale-orange;
+//   min-height: 46px;
+//   width: 100%;
+//   margin: 0 auto;
+//   margin-top: 0;
+//   font-family: $joesfin;
+//   font-weight: 600;
+//   text-transform: uppercase;
+//   clear: both;
+//   padding-top: 12px;
+//   padding-bottom: 12px;
+//   @include media ($tablet-up) {
+//     margin-top: 48px;
+//   }
+//   @include media($desktop-up) {
+//       background-color: transparent;
+//       width: auto;
+//       height: 48px;
+//       border-top: 1px solid $light-blue;
+//       border-bottom: 2px solid $bright-blue;
+//       margin-top: 60px;
+//       padding-top:12px;
+//       padding-bottom: 6px;
+
+//   }
+//   @include transition(all $default-transition-speed ease-out);
+//   a {
+//     display: block;
+//     width: 100%;
+//     text-align: center;
+//     color: $dark-gray;
+//     font-size: 14px;
+//     font-weight: 600;
+
+
+//     line-height: 1.5em;
+
+//   }
+
+//   &:hover {
+//     background-color: darken($pale-orange, 10%);
+//     @include transition(all $default-transition-speed ease-out);
+
+
+//     @include media($desktop-up) {
+//       background-color: transparent;
+//     }
+
+//   }
+//   @include media($desktop-up) {
+//       background-color: transparent;
+
+//       a {
+//         width: auto;
+//         max-width:470px;
+//         display: block;
+//         margin: 0 auto;
+//         font-size: 14px;
+//         line-height: 16px;
+//         text-align: center;
+//         padding-left: 0;
+//         padding-top: 6px;
+//         padding-bottom:0;
+//         color: $darker-orange;
+//         letter-spacing: 2px;
+//         word-spacing: 6px;
+//         font-weight: 600;
+//         //border-bottom: 2px solid $bright-blue;
+//       }
+//       a:hover {
+//         text-decoration: none;
+//         max-width:480px;
+//         color: $dark-gray;
+//         @include transition(all $default-transition-speed ease-out);
+
+//       }
+//   }
+
+// }
+
 footer {
-  margin-top: 180px;
-  height: 190px;
+  position: relative;
+  margin-top: 140px;
+  padding: 12px 1rem 60px; // 60 = back-to-top (48px) + padding (12px)
+  border-top: 6px solid $bright-blue;
+  background-color: $lighter-orange;
+  z-index: $z-above-all - 1;
 
   @include media($desktop-up) {
-    margin-bottom: 0;
-  }
-  @include outer-container;
-  .copyright {
-    color: $medium-gray;
-    text-align: center;
-    font-size: 12px;
-    padding-top: 30px;
-
-
-    background-color: white;
-    a {
-      @include animated-link-underline();
-    }
-    // @include media($desktop-up) {
-    //     padding-bottom: 24px;
-    // }
+    padding-bottom: 12px;
   }
 
-  .extra-footnote {
-    color: $medium-gray;
-    text-align: center;
-    font-size: 12px;
-    clear: both;
-    padding-top: 6px;
-    background-color: white;
-    padding-bottom: 80px;
-    @include media($desktop-up) {
-        padding-bottom: 24px;
-    }
-  }
-}
-
-
-.blog-link {
-  background-color: $pale-orange;
-  min-height: 46px;
-  width: 100%;
-  margin: 0 auto;
-  margin-top: 0;
-  font-family: $joesfin;
-  font-weight: 600;
-  text-transform: uppercase;
-  clear: both;
-  padding-top: 12px;
-  padding-bottom: 12px;
-  @include media ($tablet-up) {
-    margin-top: 48px;
-  }
-  @include media($desktop-up) {
-      background-color: transparent;
-      width: auto;
-      height: 48px;
-      border-top: 1px solid $light-blue;
-      border-bottom: 2px solid $bright-blue;
-      margin-top: 60px;
-      padding-top:12px;
-      padding-bottom: 6px;
-
-  }
-  @include transition(all $default-transition-speed ease-out);
-  a {
-    display: block;
+  .footer-container {
+    /* 960px copy from .content-main */
+    position: relative;
     width: 100%;
-    text-align: center;
-    color: $dark-gray;
-    font-size: 14px;
-    font-weight: 600;
+    max-width: 960px;
+    margin: 0 auto;
+    color: white;
+    font-family: $joesfin;
 
-
-    line-height: 1.5em;
-
-  }
-
-  &:hover {
-    background-color: darken($pale-orange, 10%);
-    @include transition(all $default-transition-speed ease-out);
-
-
-    @include media($desktop-up) {
-      background-color: transparent;
+    /* copy from .page-container */
+    @include media($tablet-up) {
+      width: 90%;
+      max-width: 960px;
     }
 
-  }
-  @include media($desktop-up) {
-      background-color: transparent;
+    @include media($desktop-up) {
+      width: 76.5%;
+      max-width: 960px;
+    }
 
-      a {
-        width: auto;
-        max-width:470px;
-        display: block;
-        margin: 0 auto;
-        font-size: 14px;
-        line-height: 16px;
-        text-align: center;
-        padding-left: 0;
-        padding-top: 6px;
-        padding-bottom:0;
-        color: $darker-orange;
-        letter-spacing: 2px;
-        word-spacing: 6px;
-        font-weight: 600;
-        //border-bottom: 2px solid $bright-blue;
+    .footer-wrapper {
+      text-align: center;
+
+      @include media($tablet-up) {
+        /* copy from .text-content */
+        width: 87.28027%;
+        margin-left: 6.35986%;
+        text-align: left;
       }
-      a:hover {
-        text-decoration: none;
-        max-width:480px;
-        color: $dark-gray;
-        @include transition(all $default-transition-speed ease-out);
 
+
+      .footer-logo {
+        width: 100%;
+        height: calc(100vw * 72 / 480);
+        max-width: 260px;
+        max-height: 50px;
+        margin-left: auto;
+        margin-right: auto;
+        background-size: 100%;
+        background-position: center;
+        background-image: url(../img/chantown-logo-footer-new-v1.png);
+        background-repeat: no-repeat;
+
+        @include media($desktop-up) {
+          background-image: url(../img/chantown-logo-footer-new-v1.png);
+          margin-left: 0;
+        }
       }
-  }
 
+      .footer-info-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        align-content: center;
+        width: 100%;
+
+        @include media($tablet-up) {
+          flex-direction: row-reverse;
+          justify-content: space-between;
+        }
+
+        .footer-social-icons {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          margin: 0;
+          padding-top: 12px;
+          padding-bottom: 12px;
+
+          li {
+            list-style-type: none;
+            padding-left: 12px;
+            padding-right: 12px;
+
+            .icon {
+              >img {
+                width: 40px;
+              }
+            }
+          }
+        }
+
+        .footer-info-based {
+          padding-top: 12px;
+          padding-bottom: 12px;
+          font-size: 1rem;
+        }
+      }
+
+      .footer-copyright {
+        font-size: 0.75rem;
+      }
+    }
+  }
 }
 
 .back-to-top {
-  position:fixed;
-  bottom:0;
-  width:100%;
-  height:48px;
-  background:$lighter-orange;
-  left:0;
-  bottom:-54px;
-  z-index:$z-above-all;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 48px;
+  background: $lighter-orange;
+  left: 0;
+  bottom: -54px;
+  z-index: $z-above-all;
   visibility: hidden;
+
   @include media($desktop-up) {
-    display:none;
+    display: none;
   }
+
   @include transition(all $default-transition-speed ease-out);
+
   &.behind-lightbox {
-    display:none;
+    display: none;
   }
+
   &.visible {
-    bottom:0;
+    bottom: 0;
     visibility: visible;
     @include transition(all $default-transition-speed ease-out);
   }
+
   a {
     display: block;
     color: white;
@@ -147,7 +261,7 @@ footer {
     height: 48px;
     text-align: center;
 
-    }
+  }
 }
 
 .up-arrow {
@@ -173,7 +287,7 @@ footer {
     transform: rotate(-45deg);
   }
 
-   &:after {
+  &:after {
     content: " ";
     width: 16px;
     height: 3px;

@@ -1,5 +1,12 @@
-<div class="row text-content">
+{{!-- <div class="row text-content">
   <h1 class="size-h1"> {{{h1}}} </h1>
+</div> --}}
+{{!-- Close Door Text Section --}}
+<div class="row text-content">
+    <div class="close-door-container">
+        <div class="close-door-item close-door-left">{{{closeDoorTextLeft}}}</div>
+        <div class="close-door-item close-door-right">{{{closeDoorTextRight}}}</div>
+   </div>
 </div>
 
 <div class="row">
@@ -17,7 +24,7 @@
 
 
 {{!-- Chantown Creative Section --}}
-<div class='row text-content'>
+{{!-- <div class='row text-content'>
     <div class='padding-top-3x'>
         <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
         data-src="{{{chantownCreativeLogo.desktopUrl}}}"
@@ -25,14 +32,27 @@
         class="b-lazy logo logo--chantown-inpage"
         alt="{{{chantownCreativeLogo.alt}}}" />
         </div>
-</div>
+</div> --}}
 
 <div class="row text-content">
-  
+    <h2 style="padding-top: 0.7em">{{{h1}}}</h2>
+
     {{{content1}}}
     <!-- Include book links -->
     {{!-- @@include('../widgets/_bookLinks.html') --}}
-    <br>
+    {{!-- <br> --}}
+</div>
+
+<div class="row text-content">
+    <h2 style="padding-top: 0.7em">{{{h1b}}}</h2>
+
+    {{{content2}}}
+</div>
+
+<div class="row text-content">
+    <h2 style="padding-top: 0.7em">{{{h1c}}}</h2>
+
+    {{{content3}}}
 </div>
 
 <div class="row text-content clients-wrapper">

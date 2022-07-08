@@ -586,7 +586,7 @@ var exec = require('child_process').exec;
 
 
 gulp.task('fetchFromDatoCMS', function (cb) {
-  return exec('./node_modules/.bin/dato dump --token=a4754214d83c6ab0c00aaf348884dca174756847ef99fb7459', function (err, stdout, stderr) {
+  return exec('./node_modules/.bin/dato dump --token=52caf57231fd4748307df530944a68', function (err, stdout, stderr) {
     console.log(stdout);
     console.log(stderr);
     cb(err);
