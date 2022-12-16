@@ -284,19 +284,23 @@ body {
     display: inline-flex;
     border-top: 2px solid #ff6600;
     border-bottom: 2px solid #ff6600;
-    padding-top: 10px;
-    padding-bottom: 10px;
     white-space: nowrap;
+    padding-top: 6px;
+    padding-bottom: 6px;
     color: #ff6600;
     font-family: 'Ultra', serif;
     font-size: 2rem;
 
     @include media($tablet-screen) {
       font-size: 2.5rem;
+      padding-top: 8px;
+      padding-bottom: 8px;
     }
 
     @include media($desktop-screen) {
-      font-size: 3.125rem;
+      font-size: 3rem;
+      padding-top: 10px;
+      padding-bottom: 10px;
     }
 
     .text-ticker-item {
