@@ -504,9 +504,15 @@ blockquote {
   .close-door-item {
     display: block;
     width: 100%;
-    font-size: 2rem;
+    font-size: 2.25rem;
+    @include media($large-mobile-screen) {
+      font-size: 3.5rem;
+    }
     @include media($tablet-screen) {
-      font-size: 3rem;
+      font-size: 3.75rem;
+    }
+    @include media($large-tablet-screen) {
+      font-size: 4.5rem;
     }
     @include media($desktop-screen) {
       font-size: 5rem;
